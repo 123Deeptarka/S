@@ -43,8 +43,8 @@ x_train,x_test,y_train,y_test = train_test_split(x,y,test_size = 0.2,random_stat
 
 #model=XGBRegressor(n_estimators=50,random_state=0,max_depth=5,max_leaves=20,reg_lambda=1,reg_alpha=2)
 #model=XGBRegressor()
-#model=RandomForestRegressor()
-model=LinearRegression()
+model=RandomForestRegressor()
+#model=LinearRegression()
 model.fit(x_train,y_train)
 pred=model.predict(x_test)
 print("The R2 value for Test Set is :",r2_score(pred,y_test))
